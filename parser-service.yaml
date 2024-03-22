@@ -4,11 +4,11 @@ spring:
     bootstrap-servers: localhost:9092
 
 # Producer configuration
-  producer:
-    key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 # Consumer configuration
-  consumer:
-    auto-offset-reset: earliest
-    group-id: 1
+    consumer:
+      auto-offset-reset: earliest
+      group-id: 1
