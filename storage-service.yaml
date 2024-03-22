@@ -12,7 +12,6 @@ spring:
               packages: "*"
 
 # PostgreSQL config
-spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/Storage
     username: postgres
