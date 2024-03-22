@@ -1,14 +1,15 @@
 # Kafka consumer config
-kafka:
-    consumer:
-      auto-offset-reset: earliest
-      group-id: 1
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        spring:
-          trusted:
-            packages: "*"
+spring:
+  kafka:
+      consumer:
+        auto-offset-reset: earliest
+        group-id: 1
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        properties:
+          spring:
+            trusted:
+              packages: "*"
 
 # PostgreSQL config
 spring:
