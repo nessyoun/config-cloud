@@ -22,4 +22,4 @@ spring:
     hibernate:
       ddl-auto: update
 
-DEBUG: true
+DEBUG: false
