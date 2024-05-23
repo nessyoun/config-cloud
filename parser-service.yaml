@@ -1,7 +1,7 @@
-# Kafka bootstrap servers
+# Kafka configuration
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
 
 # Producer configuration
     producer:
@@ -12,3 +12,8 @@ spring:
     consumer:
       auto-offset-reset: earliest
       group-id: 1
+
+# Topics:
+producerTopic: Parserbase24servicePolyTopic
+consumerTopic: Base24hostParserbase24serviceTopic
+base24Topic: Parserbase24serviceBase24hostTopic
