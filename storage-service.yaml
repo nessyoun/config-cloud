@@ -1,6 +1,7 @@
 # Kafka consumer config
 spring:
   kafka:
+      bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
       consumer:
         auto-offset-reset: earliest
         group-id: 1
@@ -12,14 +13,20 @@ spring:
               packages: "*"
 
 # PostgreSQL config
+  # datasource:
+  #   url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/Storage
+  #   username: ${POSTGRES_USER:postgres}
+  #   password: ${POSTGRES_PASSWORD:admin}
+  #   driver-class-name: org.postgresql.Driver
+  # jpa:
+  #   database-platform: org.hibernate.dialect.PostgreSQLDialect
+  #   hibernate:
+  #     ddl-auto: update
+# MySQL database configuration
   datasource:
-    url: jdbc:postgresql://localhost:5432/Storage
-    username: postgres
-    password: admin
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
+    url: jdbc:mysql://${MYSQL_SERVER_PORT:localhost:3306}/Storage
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:admin}
+    driver-class-name: com.mysql.jdbc.Driver
 
 DEBUG: false
