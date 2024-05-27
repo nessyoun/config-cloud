@@ -12,25 +12,14 @@ spring:
             trusted:
               packages: "*"
 
-# PostgreSQL config
-  # datasource:
-  #   url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/Storage
-  #   username: ${POSTGRES_USER:postgres}
-  #   password: ${POSTGRES_PASSWORD:admin}
-  #   driver-class-name: org.postgresql.Driver
-  # jpa:
-  #   database-platform: org.hibernate.dialect.PostgreSQLDialect
-  #   hibernate:
-  #     ddl-auto: update
-# MySQL database configuration
+PostgreSQL config
   datasource:
-    url: jdbc:mysql://${MYSQL_SERVER_PORT:localhost:3306}/Storage
-    username: ${MYSQL_USER:youness}
-    password: ${MYSQL_PASSWORD:youness}
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/Storage
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:admin}
+    driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-
 DEBUG: false
