@@ -12,7 +12,7 @@ spring:
             trusted:
               packages: "*"
 
-PostgreSQL config
+#PostgreSQL config
   datasource:
     url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/Storage
     username: ${POSTGRES_USER:postgres}
