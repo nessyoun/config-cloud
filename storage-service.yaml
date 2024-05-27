@@ -25,8 +25,8 @@ spring:
 # MySQL database configuration
   datasource:
     url: jdbc:mysql://${MYSQL_SERVER_PORT:localhost:3306}/Storage
-    username: ${MYSQL_USER:root}
-    password: ${MYSQL_PASSWORD}
+    username: ${MYSQL_USER:youness}
+    password: ${MYSQL_PASSWORD:youness}
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
