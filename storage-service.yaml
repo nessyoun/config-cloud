@@ -14,7 +14,7 @@ spring:
 
 #PostgreSQL config
   datasource:
-    url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/storage
+    url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/Storage
     username: ${POSTGRES_USER:naja}
     password: ${POSTGRES_PASSWORD:naja}
     driver-class-name: org.postgresql.Driver
