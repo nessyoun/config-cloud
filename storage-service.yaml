@@ -15,8 +15,8 @@ spring:
 #PostgreSQL config
   datasource:
     url: jdbc:postgresql://${POSTGES_SERVER_PORT:localhost:5432}/Storage
-    username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:admin}
+    username: ${POSTGRES_USER:naja}
+    password: ${POSTGRES_PASSWORD:naja}
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
