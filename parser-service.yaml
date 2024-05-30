@@ -2,6 +2,13 @@
 spring:
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    #consul service cofig
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        enabled: true 
 
 # Producer configuration
     producer:
@@ -12,6 +19,8 @@ spring:
     consumer:
       auto-offset-reset: earliest
       group-id: 1
+
+
 
 # Topics:
 producerTopic: Parserbase24servicePolyTopic
