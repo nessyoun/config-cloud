@@ -5,7 +5,7 @@ spring:
     #consul service cofig
   cloud:
     consul:
-      host: ${CONSUL_HOST:localhost}
+      host: ${CONSULHOST:localhost}
       port: 8500
       discovery:
         enabled: true 
