@@ -2,6 +2,14 @@
 spring:
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+# Consumer configuration
+    consumer:
+      auto-offset-reset: earliest
+      group-id: 1
     #consul service cofig
   cloud:
     consul:
@@ -11,14 +19,7 @@ spring:
         enabled: true 
 
 # Producer configuration
-    producer:
-      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-# Consumer configuration
-    consumer:
-      auto-offset-reset: earliest
-      group-id: 1
+    
 
 
 
