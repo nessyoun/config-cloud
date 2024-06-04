@@ -13,7 +13,7 @@ spring:
 # Producer configuration
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.apache.kafka.connect.json.JsonSerializer
 
 # Consumer configuration
     consumer:
